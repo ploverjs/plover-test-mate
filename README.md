@@ -1,2 +1,3 @@
-# plover-test-util
+# plover-test-mate
+
 test utility for plover modules
