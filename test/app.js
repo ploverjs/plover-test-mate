@@ -4,11 +4,11 @@
 const pathUtil = require('path');
 const sinon = require('sinon');
 
-const plover = require('../lib/app');
+const mm = require('../lib/app');
 
 
 describe('app', () => {
-  const app = plover({
+  const app = mm({
     applicationRoot: pathUtil.join(__dirname, 'fixtures/app'),
     expectRoot: pathUtil.join(__dirname, 'fixtures/expect')
   });
@@ -19,7 +19,7 @@ describe('app', () => {
 
 
   it('app with config', () => {
-    const app2 = plover({
+    const app2 = mm({
       applicationRoot: pathUtil.join(__dirname, 'fixtures/app-with-config')
     });
 
@@ -30,7 +30,7 @@ describe('app', () => {
 
 
   it('use plugin direct', () => {
-    const app3 = plover();
+    const app3 = mm();
     const plugin = sinon.spy();
     app3.use(plugin);
     plugin.should.be.called();
