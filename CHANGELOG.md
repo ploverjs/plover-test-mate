@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/ploverjs/plover-test-mate/compare/v1.1.0...v1.1.1) (2017-01-24)
+
+
+### Bug Fixes
+
+* fix settings merge wrong order. ([a39fa36](https://github.com/ploverjs/plover-test-mate/commit/a39fa36))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/ploverjs/plover-test-mate/compare/v1.0.0...v1.1.0) (2016-10-28)
 
