@@ -13,10 +13,9 @@ describe('app', () => {
     expectRoot: pathUtil.join(__dirname, 'fixtures/expect')
   });
 
-  app.use('plover-arttemplate');
+  app.install('plover-arttemplate');
 
   app.it('/', 'index.html');
-
 
   it('app with config', () => {
     const app2 = mm({
@@ -37,17 +36,16 @@ describe('app', () => {
   it('use plugin direct', () => {
     const app3 = mm();
     const plugin = sinon.spy();
-    app3.use(plugin);
+    app3.install(plugin);
     plugin.should.be.called();
   });
 
 
   it('agent with port', () => {
     const app4 = mm({ port: 6100 });
-    app4.addMiddleware(function* () {
-      this.body = this.host;
+    app4.use(ctx => {
+      ctx.body = ctx.host;
     });
-
     return app4.get('/').expect('127.0.0.1:6100');
   });
 });

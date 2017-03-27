@@ -1,6 +1,3 @@
-'use strict';
-
-
-exports.view = function() {
-  this.render();
+exports.view = ctx => {
+  ctx.render();
 };
