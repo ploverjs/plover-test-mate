@@ -1,10 +1,7 @@
-'use strict';
-
-
-module.exports = function* (next) {
-  if (this.path === '/hello') {
-    this.body = 'hello';
+module.exports = async (ctx, next) => {
+  if (ctx.path === '/hello') {
+    ctx.body = 'hello';
   } else {
-    yield next;
+    await next();
   }
 };
