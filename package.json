@@ -8,8 +8,7 @@
     "test": "mocha --require should-sinon --reporter spec --recursive --bail --check-leaks test/",
     "cov": "istanbul cover _mocha -- --require should-sinon --recursive --bail --check-leaks test/ -R spec",
     "travis": "istanbul cover _mocha --report lcovonly -- --require should-sinon --recursive --bail --check-leaks test/ -R spec",
-    "ci": "npm run lint && npm run test && npm run travis",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -o CHANGELOG.md -s"
+    "ci": "npm run lint && npm run test && npm run travis"
   },
   "files": [
     "lib"
@@ -18,7 +17,6 @@
     "supertest": "^3.0.0"
   },
   "devDependencies": {
-    "conventional-changelog-cli": "^2.0.5",
     "eslint": "^5.4.0",
     "eslint-config-bce": "^5.0.0",
     "istanbul": "^0.4.5",
